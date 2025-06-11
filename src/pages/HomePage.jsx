@@ -9,9 +9,12 @@ const HomePage = () => {
         <Header/>
           
          <div className="f">
-              <img src="\public\Images\backgrond.jpeg" alt="vivekanand college campus" className="h"/>
+              <img src="/Images/backgrond.jpeg" alt="vivekanand college campus" className="h"/>
           <div className="g">
-            <h1>Welcome to Vivekanand College!</h1>
+            <h1>Welcome to Vivekanand College!
+
+              
+            </h1>
             <p>Your journey to excellence starts here.</p>
             <Link to='/admissions'> <button id="A">Apply Now!</button></Link>
           </div>
