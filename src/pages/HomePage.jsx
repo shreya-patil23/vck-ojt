@@ -5,8 +5,8 @@ import Header from "../components/Herader/Header"
 import Footer from "../components/Footer/Footer"
 const HomePage = () => {
     return (
-      <div className="a">
-        <Header/>
+      <div className="a" style={{overflow:"auto"}}>
+        <Header/> <br></br><br></br><br></br>
           
          <div className="f">
               <img src="/Images/backgrond.jpeg" alt="vivekanand college campus" className="h"/>
