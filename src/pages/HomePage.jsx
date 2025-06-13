@@ -20,7 +20,7 @@ const HomePage = () => {
          </div>
             <p>**Vivekanand College is a premier educational institution dedicated to fostering academic excellence, innovation, and holistic development. Established in [Year of Establishment, e.g., 1980], we have proudly served generations of students, empowering them to achieve their full potential.</p>
             <p>At Vivekanand College, we believe in a vibrant learning environment that extends beyond textbooks. Our state-of-the-art facilities, experienced faculty, and diverse student community create a unique ecosystem where curiosity thrives and future leaders are shaped.</p>
-            <h2>Why Choose Vivekanand College?</h2>
+            <h2 className="line">Why Choose Vivekanand College?</h2>
             <ul>
               <li>**Legacy of Excellence:** Decades of commitment to quality education.</li>
               <li>**Experienced Faculty:** Learn from renowned experts and passionate educators.</li>
@@ -28,7 +28,7 @@ const HomePage = () => {
               <li>**Holistic Development:** Focus on co-curricular activities, sports, and community service.</li>
               <li>**Strong Placements:** Excellent career opportunities with leading companies.</li>
           </ul>
-          <h3>Campus Life & Facilities</h3>
+          <h3 className="line">Campus Life & Facilities</h3>
           <div>
           <img src="/Images/1.jpeg" alt="Campus View 1" className="k"/>
           <img src="/Images/image2.jpeg" alt="campus view 2" className="j"/>
