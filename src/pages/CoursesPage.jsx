@@ -47,7 +47,7 @@ const CoursesPage = () => {
         <li>**Master of Arts (M.A.)** (2 years)</li>
       </ul>
       <h5>Program Details & Fee Structure (Annual)</h5>
-      <table>
+      <table className="q">
         <thead>
           <tr>
             <th>Program Type</th>
@@ -59,25 +59,25 @@ const CoursesPage = () => {
          </thead>
          <tbody>
           <tr>
-            <tb>U G</tb>
-            <tb> B.Sc. Computer Science</tb>
-            <tb>3 Years</tb>
-            <tb>70000</tb>
-            <tb>10+2 Commerce</tb>
+            <td>U G</td>
+            <td> B.Sc. Computer Science</td>
+            <td>3 Years</td>
+            <td>70000</td>
+            <td>10+2 Commerce</td>
           </tr>
           <tr>
-            <tb>PG</tb>
-           <tb>MSc. Information Technology</tb>
-           <tb>2 Years</tb>
-           <tb>95000</tb>
-           <tb>BSc. IT/CS</tb>
+            <td>PG</td>
+           <td>MSc. Information Technology</td>
+           <td>2 Years</td>
+           <td>95000</td>
+           <td>BSc. IT/CS</td>
           </tr>
          </tbody>
       </table>
       
       <h4>Specialized & Vocational Courses</h4>
       <p>In addition to traditional degree programs, we offer various certificate and diploma courses in areas like Digital Marketing, Web Development, Data Analytics, and Soft Skills Development, providing specialized training for career enhancement.</p>
-     <div className="center">
+     <div>
       <h5 className="text">Explore detailed syllabi and admission criteria on our Admissions page.</h5>
       <button className="button">Inquire About Courses</button>
       </div>

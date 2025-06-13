@@ -22,10 +22,12 @@
   overflow: hidden;
   margin-bottom: 40px;
   border-radius: 8px;
+  align-items: center;
 }
 .button{
   background-color: green;
- align-items: center;
+  display: block;
+  margin: 0 auto; 
 }
 .text{
   align-items: center;
@@ -33,3 +35,33 @@
 .crnter{
   align-items: center;
 }
+
+*/ .q thead ,
+.d tbody ,
+.q th ,
+.q td,
+.q tr {
+ display: block;
+ width: auto;
+ } 
+ .q th,
+ .q td{
+    border: 1px solid #DEE2E6;
+    padding: 12px;
+    text-align: left;
+    font-size: 0.95em;
+
+ }
+ .q th{
+    background-color: #E9ECEF;
+    font-weight: bold;
+    color: #343A40;
+
+ }
+ .q tbody tr:nth-child(even){
+    background-color: #f2f2f2;
+
+ }
+ .q tbody tr:hover{
+    background-color: #E2F0FF;
+ }
