@@ -22,17 +22,15 @@ const Header = () => {
                 <Link to='/contactpage' id="y">ContactPage </Link>
                 <Link to='/admissions'><button id="x">Apply Now!</button> </Link>
                 </div>
-                    )
-                }
-                 <div>
-                    <Link to='/' id="y">HomePage  </Link>
+                    )}
+                <div>
+                <Link to='/' id="y">HomePage  </Link>
                 <Link to='/aboutpage' id="y">AboutPage </Link>
                 <Link to='/coursespage' id="y">CoursesPage </Link>
                 <Link to='/contactpage' id="y">ContactPage </Link>
                 <Link to='/admissions'><button id="x">Apply Now!</button> </Link>
                 </div>
-
-            </nav>
+               </nav>
             </header>
     )
 }

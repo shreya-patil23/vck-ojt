@@ -27,14 +27,6 @@
   margin-left: 20px;
   margin-bottom: 15px;
   color: #555;
- }
-.f{
-  position: relative;
-  width: 100%;
-  height: 350px;
-  overflow: hidden;
-  margin-bottom: 40px;
-  border-radius: 8px;
 } 
 
  .a{
@@ -71,10 +63,11 @@
   width: 900px;
 }
 
-#A{
+.A {
   background-color: green;
-  color: purple;
+  color: white;
 }
+
 .k {
    display: grid;
   grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
@@ -93,4 +86,21 @@
   color: white;
   text-align: center;
   width: 90%;
+}
+.f {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  border-radius: 8px;
+
+}
+.back{
+  background-color: aquamarine;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }

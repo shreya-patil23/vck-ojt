@@ -1,18 +1,18 @@
 import React from "react"
 import Header from "../components/Herader/Header"
 import Footer from "../components/Footer/Footer"
-
+import './courses.css'
 
 
 const CoursesPage = () => {
     return (
-        <div>
+        <div className="back">
             <Header/>
-              <div>
-            <h1>Our Academic Programs</h1>
+              <div className="cu a" style={{overflow:"auto"}}>
+            <h1 className="cr">Our Academic Programs</h1>
             <p>Vivekanand College offers a comprehensive range of undergraduate and postgraduate programs designed to equip students with the knowledge and skills demanded by today's dynamic global landscape. Our curriculum is regularly updated to reflect industry trends and academic advancements.</p>
             <h2>Discover Campus Life</h2>
-            <video src="/public/Videos/video1.mp4" controls></video>
+            <video src="/Videos/video1.mp4" controls width="100%" height="auto"></video>
             <h2>Undergraduate Programs (UG)</h2>
       <ul>
         <li>**Bachelor of science(B.Sc)
@@ -77,8 +77,10 @@ const CoursesPage = () => {
       
       <h4>Specialized & Vocational Courses</h4>
       <p>In addition to traditional degree programs, we offer various certificate and diploma courses in areas like Digital Marketing, Web Development, Data Analytics, and Soft Skills Development, providing specialized training for career enhancement.</p>
-      <h5>Explore detailed syllabi and admission criteria on our Admissions page.</h5>
-      <button>Inquire About Courses</button>
+     <div className="center">
+      <h5 className="text">Explore detailed syllabi and admission criteria on our Admissions page.</h5>
+      <button className="button">Inquire About Courses</button>
+      </div>
         </div>
           <Footer/>
         </div>

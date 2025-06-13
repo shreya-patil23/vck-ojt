@@ -21,7 +21,7 @@ const ChatbotComponent = () => {
   useEffect(() => {
     const prepareKB = async () => {
       const newKB = JSON.parse(JSON.stringify(KNOWLEDGE_BASE_DATA)); // Create a deep copy of KNOWLEDGE_BASE_DATA
-      for (const intent in newKB) {
+      for (const intent in newKB) { 
         if (newKB[intent].examples && newKB[intent].examples.length > 0) {
           const embeddings = await Promise.all(
             newKB[intent].examples.map((example) => getEmbeddings(example)) // embeddings are vectors that help machines understand meanings
@@ -36,7 +36,7 @@ const ChatbotComponent = () => {
   }, []);
   useEffect(() => {
     if (chatMessagesRef.current) {
-      chatMessagesRef.current.scrollTo({
+      chatMessagesRef.current.scrollTo({ 
         // Scrools the chat container to a specific position
         top: chatMessagesRef.current.scrollHeight, // Scrolls to very bottom of the chat box , so the latest message is visible
         behavior: "smooth",
@@ -60,7 +60,7 @@ const ChatbotComponent = () => {
         if (intent === "default") continue;
         const intentEmbeddings =
           preparedKnowledgeBase[intent].exampleEmbeddings;
-        if (intentEmbeddings.length === 0) continue;
+        if (intentEmbeddings.length === 0) continue; //== for value match === for strictly match value as well as data type
         for (const exampleEmbedding of intentEmbeddings) {
           const score = cosineSimilarity(userEmbedding, exampleEmbedding);
           if (score > bestMatch.score) {
@@ -89,12 +89,12 @@ const ChatbotComponent = () => {
       setLoading(false);
     }
   };
-  const handleSendMessage = async () => {
+  const handleSendMessage = async () => { //handle is use to input change
     if (inputValue.trim() === "") return;
     const userMessageText = inputValue;
     const newUserMessage = { text: userMessageText, sender: "user" };
-    setMessages((prevMessages) => [...prevMessages, newUserMessage]);
-    setInputValue("");
+    setMessages((prevMessages) => [...prevMessages, newUserMessage]); //(... is an spread operator) for display pravious message
+    setInputValue(""); // for making empty msg after text it
     if (!isOnline) {
       setMessages((prevMessages) => [
         ...prevMessages,
@@ -165,7 +165,7 @@ const ChatbotComponent = () => {
             )}
             {!isOnline && (
               <p className="chatbot-message offline-message">
-                :no_entry_symbol:: You are currently offline. Please check your internet
+                🚫: You are currently offline. Please check your internet
                 connection.
               </p>
             )}
@@ -173,17 +173,17 @@ const ChatbotComponent = () => {
               {messages.map((message, index) => (
                 <div key={index} className={`message-row ${message.sender}`}>
                   {message.sender === "bot" && (
-                    <div className="avatar bot-avatar">:robot_face:</div>
+                    <div className="avatar bot-avatar">🤖</div>
                   )}
                   <p className={`${message.sender}-message`}>{message.text}</p>
                   {message.sender === "user" && (
-                    <div className="avatar user-avatar">:silhouette:</div>
+                    <div className="avatar user-avatar">👤</div>
                   )}
                 </div>
               ))}
               {loading && (
                 <div className="message-row bot">
-                  <div className="avatar bot-avatar">:robot_face:</div>
+                  <div className="avatar bot-avatar">🤖</div>
                   <p className="bot-message loading-indicator">Typing...</p>
                 </div>
               )}
@@ -197,7 +197,7 @@ const ChatbotComponent = () => {
                     : "Type your message..."
                 }
                 className="message-input"
-                value={inputValue}
+                value={inputValue}  
                 onChange={handleInputChange}
                 onKeyDown={handleKeyPress}
                 disabled={loading || isKnowledgeBaseLoading || !isOnline}

@@ -1,4 +1,4 @@
-import React from "react" 
+import React, { useState } from "react" 
 import HomePage from "./pages/HomePage"
 import AboutPage from "./pages/AboutPage"
 import CoursesPage from "./pages/CoursesPage"
@@ -6,10 +6,25 @@ import  ContactPage from "./pages/ContactPage"
 import Admissions from "./pages/Admissions"
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import ChatbotComponent from "./components/Chatbot/ChatbotComponents"
-import Footer from "./components/Footer/Footer"
+import DeveloperInfoPopup from "./components/DeveloperInfo/DeveloperInfoPopup"
 const App = () => {
+const [showPopup, setShowPopup] = useState(true);
+const handleClosePopup = () => {
+setShowPopup(false);
+  };
     return (
         <div>
+            <div>
+        {/* Your main application content */}
+        <DeveloperInfoPopup
+          show={showPopup}
+          onClose={handleClosePopup}
+          studentName="Shreya Patil"
+          studentPhotoUrl="/Images/shreya.jpg" // Path to their photo
+          uniqueMessage="Learned so much during this OJT! This app showcases my independent coding and deployment skills"
+        />
+      </div>
+
             <Router>
                 <div>
                     <Routes>

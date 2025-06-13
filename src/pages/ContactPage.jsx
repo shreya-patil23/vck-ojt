@@ -1,11 +1,13 @@
 import React from "react"
+
 import Header from "../components/Herader/Header"
 import Footer from "../components/Footer/Footer"
+import './contact.css'
 const ContactPage = () => {
   return (
-    <div>
+    <div className="back">
       <Header/>
-        <div>
+        <div className="cu a" style={{overflow:"auto"}}> 
         <h1>Contact Us</h1>
          <p>We'd love to hear from you! Whether you have questions about admissions, programs, or campus life, our team is here to help.</p>
          <h1>General Enquiries</h1>
